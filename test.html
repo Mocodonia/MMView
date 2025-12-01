@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MMView</title>
+  <style>
+    body { margin:0; background:#000; color:#fff; text-align:center; }
+    img { max-width:100%; height:auto; }
+  </style>
+</head>
+<body>
+  <h1>MMView Prototype</h1>
+  <p>Click and drag to rotate through Cam360 screenshots.</p>
+  <div id="viewer"></div>
+  <script>
+    // Example: load screenshots from a folder
+    const yawAngles = [0,45,90,135,180,225,270,315];
+    let index = 0;
+    const viewer = document.getElementById('viewer');
+    const img = document.createElement('img');
+    viewer.appendChild(img);
+
+    function updateImage() {
+      img.src = `screenshots360/Toniron_Central/360_${yawAngles[index]}.png`;
+    }
+    updateImage();
+
+    document.body.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') { index = (index+1)%yawAngles.length; updateImage(); }
+      if (e.key === 'ArrowLeft') { index = (index-1+yawAngles.length)%yawAngles.length; updateImage(); }
+    });
+  </script>
+</body>
+</html>
