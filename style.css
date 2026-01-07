@@ -18,3 +18,60 @@ button {
   color: #022c22;
   cursor: pointer;
 }
+
+/* Top Bar */
+#topBar {
+  width: 100%;
+  height: 50px;
+  background: #0d1117;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #222;
+  font-family: system-ui, sans-serif;
+}
+
+/* Left side links */
+#topBar .left {
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+}
+
+#topBar a {
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#topBar a:hover {
+  text-decoration: underline;
+}
+
+/* Right side controls */
+#topBar .right {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#showDatesBtn {
+  padding: 6px 12px;
+  background: #21262d;
+  border: 1px solid #30363d;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#showDatesBtn:hover {
+  background: #30363d;
+}
+
+#placeName {
+  font-size: 16px;
+  opacity: 0.9;
+}
